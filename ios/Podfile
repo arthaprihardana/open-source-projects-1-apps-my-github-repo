@@ -1,0 +1,42 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'repoApps' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for repoApps
+
+  target 'repoApps-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+    pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+
+  end
+
+  target 'repoAppsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'repoApps-tvOS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for repoApps-tvOS
+
+  # target 'repoApps-tvOSTests' do
+  #   inherit! :search_paths
+  #   # Pods for testing
+  # end
+
+end
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'DCTAuth', :git => 'https://github.com/danielctull/DCTAuth.git'
